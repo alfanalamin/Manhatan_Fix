@@ -49,6 +49,7 @@ class _HomePageState extends State<HomePage> {
                 Column(
                   children: [
                     Padding(
+                      // left, top, right, bottom
                       padding: const EdgeInsets.fromLTRB(20, 10, 20, 16),
                       child: Container(
                         width: double.infinity,
@@ -95,8 +96,7 @@ class _HomePageState extends State<HomePage> {
                                         const SizedBox(height: 10),
                                         Text(
                                           'dr. Niko Azhari Hidayat, Sp.BTKV(K)',
-                                          style: AppTheme
-                                              .appTextTheme.tinyNoneMedium!
+                                          style: AppTheme.appTextTheme.tinyNoneMedium!
                                               .copyWith(color: Colors.white),
                                         ),
                                         const SizedBox(height: 10),
