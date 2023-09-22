@@ -114,87 +114,259 @@ class _AboutMainPageState extends State<AboutMainPage> {
           ),
           Column(
             children: [
-              Image.asset(
-                'assets/images/map.png',
+              SizedBox(
                 width: 400,
                 height: 200,
-                fit: BoxFit.cover,
+                child: Image.asset(
+                  'assets/images/map.png',
+                  fit: BoxFit.cover,
+                ),
               ),
-              const SizedBox(height: 10),
               Stack(
                 children: [
                   Container(
                     width: double.infinity,
                     height: 100,
-                    decoration: BoxDecoration(color: BaseColors.primary500),
+                    decoration: BoxDecoration(
+                      color: BaseColors.primary400,
+                    ),
                   ),
-                  
-                  const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Open Hour',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: 'Inter',
-                          color: Colors.white,
+                  Positioned(
+                    bottom: 0,
+                    right: 0,
+                    child: Image.asset(
+                      'assets/images/Ellipse 5.png',
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    left: 0,
+                    child: Image.asset(
+                      'assets/images/Ellipse 4.png',
+                    ),
+                  ),
+                  const Positioned(
+                    bottom:
+                        20, // Sesuaikan dengan jarak ke bawah yang Anda inginkan
+                    left: 0,
+                    right: 0, // Memastikan teks mengisi lebar container
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Open Hour',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: 'Inter',
+                            color: Colors.white,
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.calendar_today_outlined,
-                                color: Colors.white,
-                                size: 24,
-                              ),
-                              SizedBox(width: 10),
-                              Text(
-                                'Senin - Jumat',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: 'Inter',
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.calendar_today_outlined,
                                   color: Colors.white,
+                                  size: 24,
                                 ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                          SizedBox(width: 20),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.lock_clock_outlined,
-                                color: Colors.white,
-                                size: 24,
-                              ),
-                              SizedBox(width: 10),
-                              Text(
-                                '08.00 - 13.00',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: 'Inter',
+                                SizedBox(width: 10),
+                                Text(
+                                  'Senin - Jumat',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: 'Inter',
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                            SizedBox(width: 20),
+                            Row(
+                              children: [
+                                Icon(
+                                  Icons.lock_clock_outlined,
                                   color: Colors.white,
+                                  size: 24,
                                 ),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  )
+                                SizedBox(width: 10),
+                                Text(
+                                  '08.00 - 13.00',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: 'Inter',
+                                    color: Colors.white,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               )
             ],
-          )
+          ),
+          const SizedBox(height: 20),
+          Column(
+            children: [
+              Divider(
+                color: BaseColors.neutral300,
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Column(
+            children: [
+              Text(
+                'Kontak Info',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: 'Inter',
+                  color: BaseColors.neutral950,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Column(
+            children: [
+              Column(
+                children: [
+                  Icon(
+                    Icons.add_location_alt_outlined,
+                    color: BaseColors.primary400,
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'Address :',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Inter',
+                      color: BaseColors.neutral950,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'Klinik Vaskular RS Universitas Airlangga, Surabaya, East Java, Indonesia ',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: 'Inter',
+                      color: BaseColors.neutral950,
+                    ),
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Column(
+                children: [
+                  Icon(
+                    Icons.phone_outlined,
+                    color: BaseColors.primary400,
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'Whatsapp :',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Inter',
+                      color: BaseColors.neutral950,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    '+62-81332355540',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: 'Inter',
+                      color: BaseColors.neutral950,
+                    ),
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Column(
+                children: [
+                  Icon(
+                    Icons.phone_outlined,
+                    color: BaseColors.primary400,
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'Telepon :',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Inter',
+                      color: BaseColors.neutral950,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    '+62-81332355540',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: 'Inter',
+                      color: BaseColors.neutral950,
+                    ),
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Column(
+                children: [
+                  Icon(
+                    Icons.message_outlined,
+                    color: BaseColors.primary400,
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'Email :',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Inter',
+                      color: BaseColors.neutral950,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(
+                    'varisesindonesia@gmail.com',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: 'Inter',
+                      color: BaseColors.neutral950,
+                    ),
+                    textAlign: TextAlign.center,
+                    maxLines: 2,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ],
       ),
     );
