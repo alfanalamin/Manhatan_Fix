@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manhatan_project/presentation/pages/about_main_page.dart';
 
 import '../../../common/app_theme.dart';
 import '../../../common/color.dart';
@@ -54,11 +55,19 @@ class AppNavbar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                 ),
                 const SizedBox(width: 8),
-                const Icon(
-                  Icons.info_outline_rounded,
-                  color: Colors.black,
-                  size: 35,
-                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AboutMainPage()),
+                    );
+                  },
+                  child: const Icon(
+                    Icons.info_outline_rounded,
+                    color: Colors.black,
+                    size: 35,
+                  ),
+                )
               ],
             ),
           ],
