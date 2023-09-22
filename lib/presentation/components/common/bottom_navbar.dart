@@ -51,7 +51,7 @@ class BottomNavBar extends StatelessWidget {
               case 3:
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                      builder: (context) => const AboutMainPage()),
+                      builder: (context) => const VarisesMainPage()),
                 );
                 break;
               case 4:
